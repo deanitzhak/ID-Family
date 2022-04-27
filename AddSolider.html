@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>ID Family</title>
+    </head>
+    <body >
+        <div id="Wrapper" >
+            <header id="headerHolder">
+                <div id="profileHolder">
+                    <a href="#" id="profile2"></a>
+                    <h2 class="soldierName">אריאל טובים</h2>
+                </div>
+                <div id="logoHolder">
+                    <a href="index.html" id="logo"></a>
+                </div>
+                <div id="menuHolder">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <div id="mySidenav" class="sidenav">
+                        <div id="profileHolder" style="margin-top: 10px;">
+                            <a href="#" id="profile2"></a>
+                            <h2 class="soldierName">אריאל טובים</h2>
+                        </div>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="buffer"></div>
+                        <a href="#">פרופיל</a>
+                        <a href="#">הודעות</a>
+                        <a href="#">מסמכים</a>
+                        <a href="#">אירועים</a>
+                        <div class="buffer"></div>
+                        <a href="#">הגדרות</a>
+                        <a href="#">התנתקות</a>
+                    </div>
+            </header>
+            <form action="get_params_login.php" method="GET" class="form-horizontal" id="AddSoldier">
+                <span>הוספת חייל חדש</span>
+                <div class="form-group">
+                <label  >:שם מלא
+                    <div>
+                    <input type="text" name="fullName" placeholder="שם מלא" required
+                    pattern="[א-ת]+ [א-ת]+$">
+                    </div>
+                </label>
+                </div>
+                <br>
+                <div class="form-group">
+                <label >:סיסמא ראשונית
+                    <div>
+                    <input type="password" name="password" placeholder="סיסמא" required>
+                    </div>
+                </label>
+                </div>
+                <br>
+                <div class="form-group">
+                <label >:תאריך לידה
+                    <div>
+                    <input type="date" name="dateOfBirth" required>
+                    </div>
+                </label>
+                </div> 
+                <br>         
+                <div class="form-group">
+                        <label >:מספר טלפון
+                            <div>
+                            <input type="tel" name="phone" placeholder="מספר טלפון" pattern="[0-9]{9,10}" required>
+                            </div>
+                        </label>  
+                </div>        
+                <br>
+                <div class="form-group">
+                    <span>:מין</span>
+                    <br>
+                    <label>זכר<input type="radio" name="gender" value="male"></label>
+                    <label>נקבה<input type="radio" name="gender" value="female"></label>
+                </div>
+                <br>  
+                <div class="form-group">
+                <label >:אנשי קשר למקרה חירום
+                    <div>
+                    <textarea name="contacts" cols="30" rows="4" placeholder="שם ומספר טלפון"></textarea>
+                    </div>
+                </label>  
+                </div>
+                <br>
+                <div class="form-group">
+                    <label >:מקום מגורים
+                        <div>
+                        <textarea name="address" cols="30" rows="2"  placeholder="כתובת"></textarea>
+                        </div>
+                    </label>
+                </div>
+                <br>
+                <div class="form-group">
+                <label >:אישורי עבודה
+                    <div>
+                    <input type="file" name="workPermits">
+                    </div>
+                </label>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label >:תנאי שירות
+                        <div>
+                        <input type="file" name="termsOfService">
+                        </div>
+                    </label>  
+                </div> 
+                <br>
+                <div class="form-group">
+                    <label >:פטורים
+                        <div>
+                        <input type="file" name="release"> 
+                        </div>
+                    </label> 
+                </div>
+                <br>
+                <br>
+                <input id="submit-button" type="submit" value="שליחה" class="btn btn-secondary btn-sm">
+            </form>
+        </div>
+        <script src="js/commanderScripts.js"></script>
+    </body>
+</html>
